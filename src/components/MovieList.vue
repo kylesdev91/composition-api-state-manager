@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import useMovieState from './store/useMovieState';
+import useMovieState from '../store/useMovieState';
 
 export default {
   name: 'MovieList',
