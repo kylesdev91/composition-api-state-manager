@@ -15,6 +15,7 @@
 
 <script>
 import { ref } from '@vue/reactivity';
+import { login } from '../api';
 export default {
   name: 'UserLogin',
   setup: () => {
@@ -24,7 +25,7 @@ export default {
     });
 
     const onSubmit = () => {
-      console.log(userForm.value);
+      login().then((data) => console.log(data));
     };
 
     return {
