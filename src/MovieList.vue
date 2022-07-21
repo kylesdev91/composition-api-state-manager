@@ -5,25 +5,14 @@
 </template>
 
 <script>
+import useMovieState from './store/useMovieState';
+
 export default {
   name: 'MovieList',
   setup: () => {
-    const movies = [
-      {
-        id: 1,
-        title: 'Movie 1',
-      },
-      {
-        id: 2,
-        title: 'Movie 2',
-      },
-      {
-        id: 3,
-        title: 'Movie 3',
-      },
-    ];
+    const { state: movieState } = useMovieState();
     return {
-      movies,
+      movies: movieState.movies,
     };
   },
 };
